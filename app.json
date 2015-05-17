@@ -1,0 +1,7 @@
+{
+  "name": "gymtech",
+  "description": "Barebones Node.js app using Orange UserDetails API",
+  "repository": "https://github.com/ThyGat/GymTech",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "heroku", "orange", "userdetails"]
+}
