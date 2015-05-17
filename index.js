@@ -8,8 +8,8 @@ var https = require('https');
 
 var CLIENT_ID = 'tXBelIi9Am2I2f1nbvAC59GAwPTEGuX5';
 var CLIENT_SECRET = 'fHVcTgwP8f06V65E';
-var REDIRECT_URI = 'https://userdetails.herokuapp.com/identity';
-var REDIRECT_URI_ENCODED = 'https%3A%2F%2Fuserdetails.herokuapp.com%2Fidentity';
+var REDIRECT_URI = 'https://gymtech.herokuapp.com/identity';
+var REDIRECT_URI_ENCODED = 'https%3A%2F%2Fgymtech.herokuapp.com%2Fidentity';
 
 function createMainPage (req, res) {
 
