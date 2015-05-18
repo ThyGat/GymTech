@@ -23,31 +23,34 @@ function createMainPage (req, res) {
         url += "&redirect_uri="+REDIRECT_URI_ENCODED;
         
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        var result = "<!DOCTYPE html><html><title>Orange UserDetails API demo</title>";
+        var result = "<!DOCTYPE html><html><title>GymTech</title>";
         result += "<style>";
-        result += "h1 { color: #FF8000; }";
-        result += "a { color: #FF8000; }";
-        result += "a:hover { color: #804000; }";
-        result += "html {";
-        result += "background:url(Gym.jpg) no-repeat center top;"; 
-        result += "background-size: cover;";
-        result += "}";
+        result += "h1, h2, a, p, td { color: navy; font-family: sans-serif; padding: 20px; }";
+        result += "td { font-size: 40px; vertical-align: middle; }";
+        result += "body { margin: 0 }";
         result += "</style>";
-        result += "<body><center>";
-        result += "<h1>Orange UserDetails API demo</h1>";
-        result += 'Click <a href="'+url+'">here</a> to enter your Orange account.';
-        result += '</center></body></html>';
+        result += '<body>';
+        result += '<img src="Gym.jpg" width=100%>';
+        result += '<table><tr>';
+        result += '<td><img src="GymTech-logo.png" width=80px></td>';
+        result += '<td>GymTech</td>';
+        result += '</tr></table>';
+        result += '<p>Sign in using your account with:</p>';
+        result += '<p><img src="GymTech/public/OTT-monochrome-logos.png">&nbsp;';
+        result += '<a href="'+url+'"><img src="Orange-logo.png"></a>';
+		result += '</p>';
+        result += '</body></html>';
         res.send(result);
 }
 
 function createErrorPage (res, msg) {
 
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        var result = "<html><title>Orange UserDetails API demo</title>";
+        var result = "<!DOCTYPE html><html><title>GymTech</title>";
         result += "<style>";
-        result += "h1 { color: #FF8000; }";
-        result += "a { color: #FF8000; }";
-        result += "a:hover { color: #804000; }";
+        result += "h1 { color: navy; }";
+        result += "a { color: navy; }";
+        result += "a:hover { color: black; }";
         result += "</style>";
         result += "<body><center>";
         result += "<h1>Orange UserDetails API demo</h1>";
@@ -59,16 +62,16 @@ function createErrorPage (res, msg) {
 function createDetailsPage (res, user) {
 
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        var result = "<html><title>Orange UserDetails API demo</title>";
+        var result = "<!DOCTYPE html><html><title>GymTech</title>";
         result += "<style>";
-        result += "h1 { color: #FF8000; }";
-        result += "td.p { color: #FF8000; text-align:right}";
-        result += "td.v { color: #000; text-align:left}";
-        result += "a { color: #FF8000; }";
-        result += "a:hover { color: #804000; }";
+        result += "h1 { color: navy; }";
+        result += "td.p { color: black; text-align:right}";
+        result += "td.v { color: black; text-align:left}";
+        result += "a { color: gray; }";
+        result += "a:hover { color: black; }";
         result += "</style>";
         result += "<body><center>";
-        result += "<h1>Orange UserDetails API demo</h1>";
+        result += "<h1>Subscription form</h1>";
         result += "<table>";
         for (prop in user) {
             result += '<tr><td class="p">'+prop+'</td><td class="v">'+user[prop]+'</td></tr>'
