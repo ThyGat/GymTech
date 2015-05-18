@@ -64,10 +64,10 @@ function createDetailsPage (res, user) {
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
         var result = "<!DOCTYPE html><html><title>GymTech</title>";
         result += "<style>";
-        result += "h1, h2, a, p, td { color: navy; font-family: sans-serif; padding: 20px; }";
+        result += "h1, h2, a, p, td { color: navy; font-family: sans-serif; padding: 10px; }";
         result += "td { font-size: 40px; vertical-align: middle; }";
         result += "td.p { color: gray; font-size: 20px; text-align:right}";
-        result += "td.v { color: black; font-size: 22px; text-align:left}";
+        result += "td.v { color: black; font-size: 22px; text-align:left; background-color:silver}";
         result += "body { margin: 0 }";
         result += "</style>";
         result += "<body>";
