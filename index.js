@@ -36,7 +36,7 @@ function createMainPage (req, res) {
         result += '<td>GymTech</td>';
         result += '</tr></table>';
         result += '<p>Sign in using your account with:</p>';
-        result += '<p><img src="GymTech/public/OTT-monochrome-logos.png">&nbsp;';
+        result += '<p><img src="OTT-monochrome-logos.png">&nbsp;';
         result += '<a href="'+url+'"><img src="Orange-logo.png"></a>';
 		result += '</p>';
         result += '</body></html>';
