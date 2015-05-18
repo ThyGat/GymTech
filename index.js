@@ -48,14 +48,14 @@ function createErrorPage (res, msg) {
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
         var result = "<!DOCTYPE html><html><title>GymTech</title>";
         result += "<style>";
-        result += "h1 { color: navy; }";
-        result += "a { color: navy; }";
-        result += "a:hover { color: black; }";
+        result += "h1, h2, a, p, td { color: navy; font-family: sans-serif; padding: 20px; }";
+        result += "td { font-size: 40px; vertical-align: middle; }";
+        result += "body { margin: 0 }";
         result += "</style>";
-        result += "<body><center>";
-        result += "<h1>Orange UserDetails API demo</h1>";
-        result += 'An unexpected error occured ('+msg+')<br><a href="'+HOME+'">Please, try again</a>';
-        result += '</center></body></html>';
+        result += '<body>';
+        result += '<h1>GymTech connection</h1>';
+        result += '<p>An unexpected error occured ('+msg+')</p><p><a href="'+HOME+'">Please, try again</a></p>';
+        result += '</body></html>';
         res.send(result);
 }
     
@@ -64,21 +64,25 @@ function createDetailsPage (res, user) {
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
         var result = "<!DOCTYPE html><html><title>GymTech</title>";
         result += "<style>";
-        result += "h1 { color: navy; }";
+        result += "h1, h2, a, p, td { color: navy; font-family: sans-serif; padding: 20px; }";
+        result += "td { font-size: 40px; vertical-align: middle; }";
         result += "td.p { color: black; text-align:right}";
         result += "td.v { color: black; text-align:left}";
-        result += "a { color: gray; }";
-        result += "a:hover { color: black; }";
+        result += "body { margin: 0 }";
         result += "</style>";
-        result += "<body><center>";
+        result += "<body>";
+        result += '<table><tr>';
+        result += '<td><img src="GymTech-logo.png" width=80px></td>';
+        result += '<td>GymTech</td>';
+        result += '</tr></table>';
         result += "<h1>Subscription form</h1>";
         result += "<table>";
         for (prop in user) {
             result += '<tr><td class="p">'+prop+'</td><td class="v">'+user[prop]+'</td></tr>'
         }
         result += "</table>";
-        result += '<br><a href="'+HOME+'">Restart</a>';
-        result += '</center></body></html>';
+        result += '<p><a href="'+HOME+'">Restart</a></p>';
+        result += '</body></html>';
         res.send(result);
 }
 
