@@ -66,8 +66,8 @@ function createDetailsPage (res, user) {
         result += "<style>";
         result += "h1, h2, a, p, td { color: navy; font-family: sans-serif; padding: 20px; }";
         result += "td { font-size: 40px; vertical-align: middle; }";
-        result += "td.p { color: black; text-align:right}";
-        result += "td.v { color: black; text-align:left}";
+        result += "td.p { color: gray; font-size: 20px; text-align:right}";
+        result += "td.v { color: black; font-size: 22px; text-align:left}";
         result += "body { margin: 0 }";
         result += "</style>";
         result += "<body>";
