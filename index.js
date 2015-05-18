@@ -15,7 +15,7 @@ var REDIRECT_URI_ENCODED = 'https%3A%2F%2Fgymtech.herokuapp.com%2Fidentity';
 function createMainPage (req, res) {
 
         var url = "https://api.orange.com/oauth/v2/authorize?";
-        url += "scope=openid%20profile";
+        url += "scope=openid%20profile%20address%20phone%20email";
         url += "&response_type=code";
         url += "&client_id="+CLIENT_ID;
         url += "&prompt=login%20consent";
