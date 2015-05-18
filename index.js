@@ -54,7 +54,8 @@ function createErrorPage (res, msg) {
         result += "</style>";
         result += '<body>';
         result += '<h1>GymTech connection</h1>';
-        result += '<p>An unexpected error occured ('+msg+')</p><p><a href="'+HOME+'">Please, try again</a></p>';
+        result += '<p>An unexpected error occured ('+msg+')</p>';
+        result += '<p><a href="'+HOME+'"><img src="restart.png"></a></p>';
         result += '</body></html>';
         res.send(result);
 }
@@ -67,7 +68,7 @@ function createDetailsPage (res, user) {
         result += "h1, h2, a, p, td { color: navy; font-family: sans-serif; padding: 10px; }";
         result += "td { font-size: 40px; vertical-align: middle; }";
         result += "td.p { color: gray; font-size: 20px; text-align:right}";
-        result += "td.v { color: black; font-size: 22px; text-align:left; background-color:silver}";
+        result += "td.v { color: black; font-size: 22px; text-align:left; background-color:WhiteSmoke }";
         result += "body { margin: 0 }";
         result += "</style>";
         result += "<body>";
@@ -75,13 +76,13 @@ function createDetailsPage (res, user) {
         result += '<td><img src="GymTech-logo.png" width=80px></td>';
         result += '<td>GymTech</td>';
         result += '</tr></table>';
-        result += "<h1>Subscription form</h1>";
-        result += "<table>";
+        result += '<h1>Subscription form</h1>';
+        result += '<table>';
         for (prop in user) {
             result += '<tr><td class="p">'+prop+'</td><td class="v">'+user[prop]+'</td></tr>'
         }
-        result += "</table>";
-        result += '<p><a href="'+HOME+'">Restart</a></p>';
+        result += '</table>';
+        result += '<p><a href="'+HOME+'"><img src="restart.png"></a></p>';
         result += '</body></html>';
         res.send(result);
 }
