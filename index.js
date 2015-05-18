@@ -79,7 +79,11 @@ function createDetailsPage (res, user) {
         result += '<h1>Subscription form</h1>';
         result += '<table>';
         for (prop in user) {
-            result += '<tr><td class="p">'+prop+'</td><td class="v">'+user[prop]+'</td></tr>'
+    	  	if (prop.includes("updated")) {
+    	  		result += '<tr><td class="p">'+prop+'</td><td class="v">'+user[prop].toISOString()+'</td></tr>'
+        	} else {
+	            result += '<tr><td class="p">'+prop+'</td><td class="v">'+user[prop]+'</td></tr>'
+	        }
         }
         result += '</table>';
         result += '<p><a href="'+HOME+'"><img src="restart.png"></a></p>';
