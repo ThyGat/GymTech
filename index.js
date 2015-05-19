@@ -79,7 +79,13 @@ function createDetailsPage (res, user) {
         result += '<h1>Subscription form</h1>';
         result += '<table>';
         for (prop in user) {
-	         result += '<tr><td class="p">'+prop+'</td><td class="v">'+user[prop]+'</td></tr>'
+        	 if (prop.toString() === "address") {
+        	 	for (addressProp in user.address) {
+	        	 	result += '<tr><td class="p">'+addressProp+'</td><td class="v">'+user.address[addressProp]+'</td></tr>'
+	        	 }
+        	 } else {
+		         result += '<tr><td class="p">'+prop+'</td><td class="v">'+user[prop]+'</td></tr>';
+	         }
         }
         result += '</table>';
         result += '<p><a href="'+HOME+'"><img src="restart.png"></a></p>';
