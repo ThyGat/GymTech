@@ -1,6 +1,6 @@
 # GymTech
 
-A simple Node.js demo app for the **Orange** [User Details](https://www.orangepartner.com/integrate) API.
+A simple Node.js demo app for the **Orange** [User Details](https://developer.orange.com/apis/user-details-france/) API.
 This app is using [Express](http://expressjs.com/) and deployed at [Heroku](http://gymtech.herokuapp.com).
 
 
@@ -25,8 +25,8 @@ $ heroku logs --tail
 
 For more information about **Orange APIs**, please read the following pages:
 
-- [Getting started with Orange Identity API](https://www.orangepartner.com/content/getting-started-identity?api=identity_fr_product)
-- [Getting started with Orange User Details API](https://www.orangepartner.com/content/getting-started-user-details)
+- [Getting started with Orange Identity API](https://developer.orange.com/apis/identity-france/getting-started)
+- [Getting started with Orange User Details API](https://developer.orange.com/apis/user-details-france/getting-started)
 
 
 For more information about using Node.js on Heroku, see these Dev Center articles:
